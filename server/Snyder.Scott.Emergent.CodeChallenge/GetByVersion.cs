@@ -25,7 +25,7 @@ namespace Snyder.Scott.Emergent.CodeChallenge
 
         [FunctionName("GetByVersion")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "version/{version}")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "version/{version}")] HttpRequest req,
             string version)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
