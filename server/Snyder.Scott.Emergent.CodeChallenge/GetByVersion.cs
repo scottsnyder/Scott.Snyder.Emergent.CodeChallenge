@@ -30,15 +30,6 @@ namespace Snyder.Scott.Emergent.CodeChallenge
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
 
-            // TODO: Do I actually want to do this here? First though, pull it out and let the service deal with all of it.
-            // Input data validation.
-            if (!SemVersion.TryParse(version, out var parsedVersion))
-            {
-                _logger.LogInformation($"TryParse failure with value: {version}");
-                 ;
-            }
-
-
             IEnumerable<Software> software;
             try
             {
